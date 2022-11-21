@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -9,26 +9,13 @@ import { AlertController } from '@ionic/angular';
 })
 export class HomePage implements OnInit {
 
-  roleMsg = ' ';
-  
-  constructor(private alertController: AlertController) {}
-  
-  
-  async presentAlert() {
-    const alert = await this.alertController.create({
-      header: 'Warning!',
-      buttons: [
-        {
-          text: 'Ok',
-          role: 'confirm',
-        },
-       ],
-     });
-    await alert.present();
-  }
+  constructor(private router: Router) {}
+
 
   ngOnInit() {
   }
-  
+  schedule(){
+    this.router.navigate(['appointmentpick'])
+  }
   
 }
