@@ -5,7 +5,13 @@ const routes: Routes = [
   {path: '',redirectTo: 'loader',pathMatch: 'full'},
   {path: 'loader',loadChildren: () => import('./pages/loader/loader.module').then( m => m.LoaderPageModule)},
   {path: 'login',loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)},
-  {path: 'home',loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)}];
+  {path: 'home',loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)},
+  {
+    path: 'appointmentpick',
+    loadChildren: () => import('./pages/appointmentpick/appointmentpick.module').then( m => m.AppointmentpickPageModule)
+  },
+  
+];
 
 @NgModule({
   imports: [
