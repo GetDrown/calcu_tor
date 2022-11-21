@@ -1,5 +1,54 @@
+<ion-header>
+    <ion-toolbar color="warning">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Home</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
 <ion-content>
-    <ion-button color="warning" (click)="presentAlert()" [routerLink]="['/login']">Sign Out</ion-button>
+    <ion-list color="warning">
+        <ion-item>
+            <ion-avatar slot="start">
+                <img src="https://www.clipartmax.com/png/middle/182-1828676_person-icons-person-icon.png">
+            </ion-avatar>
+            <ion-label>
+                <h1>Engr. Aiko E. Lara</h1>
+                <p>Appointment Schedule: 20/11/22</p>
+                <p>Remarks: Done</p>
+               </ion-label>
+        </ion-item>
+    </ion-list>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-subtitle>Upcoming Schedule:</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-item lines="none">
+                <ion-icon name="time-outline" slot="start" color="default"></ion-icon>
+                <ion-label>
+                  Upcoming
+                <p>24/11/22 09:30:00</p>      
+                </ion-label>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-label>
+                    <p>Created by: Peter Is My Idol</p>
+                    <p>Address: Panabo City</p>
+                    <p>Phone Number: 09xxxxx</p>
+                </ion-label>
+            </ion-item>
+            <ion-button color="warning" fill="clear" size="full">Tap to view</ion-button>
+        </ion-card-content>
+    </ion-card>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button color="warning" (click)="schedule()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+    
    
     
 </ion-content>
